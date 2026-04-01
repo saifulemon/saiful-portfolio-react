@@ -1,0 +1,16 @@
+packages:
+  "framer-motion": "For smooth scroll-triggered animations and page transitions"
+  "three": "For 3D hero section rendering"
+  "@react-three/fiber": "React renderer for Three.js"
+  "@react-three/drei": "Useful helpers for React Three Fiber (controls, shapes)"
+  "clsx": "Utility for conditionally joining classNames"
+  "tailwind-merge": "Utility to merge tailwind classes safely"
+
+images:
+  - path: "artifacts/portfolio/public/images/avatar.png"
+    description: "A highly stylized, minimal, and modern cyberpunk/hacker portrait of a male developer, dark navy and cyan lighting, abstract glowing geometric elements in the background."
+    aspect_ratio: "1:1"
+
+notes:
+  - "No backend integration needed, all content is static based on provided implementation notes."
+  - "Using Framer Motion for scroll animations and React Three Fiber for the 3D hero background."
