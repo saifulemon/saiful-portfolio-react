@@ -12,7 +12,7 @@ class WebGLErrorBoundary extends Component<{ children: ReactNode; fallback: Reac
 function CSSAnimatedBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div className="absolute inset-0 bg-[#050508]" />
+      <div className="absolute inset-0 bg-background" />
       {Array.from({ length: 80 }).map((_, i) => (
         <div
           key={i}
@@ -94,7 +94,15 @@ function ThreeJsBackground() {
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color('#050508');
+        const isLight = () => document.documentElement.classList.contains('light');
+        scene.background = new THREE.Color(isLight() ? '#eef0f5' : '#050508');
+
+        // Update background when theme toggles
+        const observer = new MutationObserver(() => {
+          scene.background = new THREE.Color(isLight() ? '#eef0f5' : '#050508');
+          starMat.color.set(isLight() ? 0x94a3b8 : 0xffffff);
+        });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
         const camera = new THREE.PerspectiveCamera(45, canvas.offsetWidth / canvas.offsetHeight, 0.1, 1000);
         camera.position.set(0, 0, 7);
@@ -112,7 +120,8 @@ function ThreeJsBackground() {
         const positions = new Float32Array(stars * 3);
         for (let i = 0; i < stars * 3; i++) positions[i] = (Math.random() - 0.5) * 200;
         starGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-        scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xffffff, size: 0.1 })));
+        const starMat = new THREE.PointsMaterial({ color: isLight() ? 0x94a3b8 : 0xffffff, size: 0.1 });
+        scene.add(new THREE.Points(starGeo, starMat));
 
         const geo = new THREE.IcosahedronGeometry(2, 1);
         const mat = new THREE.MeshPhysicalMaterial({ color: 0x3b82f6, roughness: 0.05, metalness: 0.1, transparent: true, opacity: 0.6, transmission: 0.95, clearcoat: 1, ior: 1.5, thickness: 2 });
@@ -155,7 +164,10 @@ function ThreeJsBackground() {
           renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
         };
         window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        return () => {
+          window.removeEventListener('resize', handleResize);
+          observer.disconnect();
+        };
       } catch (e) {
         console.warn('WebGL unavailable, using CSS fallback');
       }

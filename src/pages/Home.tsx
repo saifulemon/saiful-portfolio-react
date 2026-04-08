@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Facebook, Download } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Facebook, Download, Code2, Smartphone, Palette, ShoppingCart, Layers, Plug } from 'lucide-react';
 import { PORTFOLIO_DATA } from '@/lib/data';
 import { Hero3D } from '@/components/Hero3D';
 import { Navbar } from '@/components/Navbar';
 import { SectionHeading } from '@/components/SectionHeading';
 import { TimelineItem } from '@/components/Timeline';
 import { ProjectCard } from '@/components/ProjectCard';
+import { TypingAnimation } from '@/components/TypingAnimation';
+import { SkillBadge } from '@/components/SkillBadge';
 
 export function Home() {
   return (
@@ -30,10 +32,10 @@ export function Home() {
                 <h2 className="text-primary font-medium tracking-wider uppercase mb-4 pl-1">
                   Hello, world. I am
                 </h2>
-                <h1 className="text-5xl sm:text-7xl lg:text-8xl font-display font-extrabold text-foreground tracking-tight leading-none mb-6">
+                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-display font-extrabold text-foreground tracking-tight leading-tight mb-6">
                   {PORTFOLIO_DATA.personal.name}.<br/>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                    I build the web.
+                  <span className="block min-h-[1.3em]">
+                    <TypingAnimation />
                   </span>
                 </h1>
                 <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
@@ -152,12 +154,7 @@ export function Home() {
                   </h3>
                   <div className="flex flex-wrap gap-3">
                     {category.skills.map(skill => (
-                      <span 
-                        key={skill}
-                        className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium hover:bg-white/10 transition-colors cursor-default"
-                      >
-                        {skill}
-                      </span>
+                      <SkillBadge key={skill} name={skill} />
                     ))}
                   </div>
                 </motion.div>
@@ -192,16 +189,59 @@ export function Home() {
                 <SectionHeading title="Education" />
                 <div className="space-y-12">
                   {PORTFOLIO_DATA.education.map((edu, idx) => (
-                    <TimelineItem 
+                    <TimelineItem
                       key={edu.id}
                       title={edu.degree}
                       subtitle={edu.institution}
                       period={edu.period}
+                      bullets={(edu as any).achievements}
                       isLast={idx === PORTFOLIO_DATA.education.length - 1}
                     />
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICES SECTION */}
+        <section id="services" className="py-24 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <SectionHeading title="Services" subtitle="What I can build for you." />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {PORTFOLIO_DATA.services.map((service, idx) => {
+                const icons: Record<string, React.ReactNode> = {
+                  code:    <Code2 size={28} />,
+                  mobile:  <Smartphone size={28} />,
+                  palette: <Palette size={28} />,
+                  cart:    <ShoppingCart size={28} />,
+                  stack:   <Layers size={28} />,
+                  api:     <Plug size={28} />,
+                };
+                return (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="group glass-card p-8 rounded-3xl border border-white/5 hover:border-primary/30 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="relative text-center">
+                      <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-accent mb-6 group-hover:bg-primary group-hover:text-background transition-colors duration-300 mx-auto">
+                        {icons[service.icon]}
+                      </div>
+                      <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -213,11 +253,14 @@ export function Home() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {PORTFOLIO_DATA.projects.map((project, idx) => (
-                <ProjectCard 
+                <ProjectCard
                   key={project.id}
                   title={project.title}
                   description={project.description}
                   tags={project.tags}
+                  highlights={(project as any).highlights}
+                  liveUrl={(project as any).liveUrl}
+                  githubUrl={(project as any).githubUrl}
                   index={idx}
                 />
               ))}
