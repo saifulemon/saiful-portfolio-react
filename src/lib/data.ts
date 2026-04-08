@@ -1,7 +1,7 @@
 export const PORTFOLIO_DATA = {
   personal: {
     name: "Saiful Islam",
-    title: "Junior Frontend-Specialized Full-Stack Developer",
+    title: "Frontend-Focused AI-Native Full Stack Developer",
     location: "Dhaka, Bangladesh",
     email: "dev.saifulemon@gmail.com",
     phone: "+8801302050981",
@@ -13,18 +13,19 @@ export const PORTFOLIO_DATA = {
   skills: {
     frontend: ["React.js", "Next.js", "Remix.js", "JavaScript (ES6+)", "TypeScript", "Bootstrap", "Tailwind CSS", "shadcn", "Redux"],
     backend: ["Nest.js", "Socket.io", "PostgreSQL"],
-    tools: ["VS Code", "Cursor", "Claude Code", "Git", "Firebase", "Linux", "WordPress", "Shopify"]
+    tools: ["VS Code", "Cursor", "Claude Code", "GitHub Copilot", "Git", "Firebase", "Linux", "WordPress", "Shopify"]
   },
   experience: [
     {
       id: 1,
       role: "Jr. Frontend Developer",
       company: "Potential Inc.",
-      period: "October 2024 – Present",
+      period: "July 2024 – Present",
       achievements: [
-        "Extensive work with React, Next.js, Remix, and Redux",
-        "Backend contributions using Nest.js and PostgreSQL",
-        "Experience in AI-native development practices and team collaboration"
+        "Built features with React, Next.js, Remix, Redux, Nest.js and PostgreSQL",
+        "Created reusable components and custom hooks to improve UI consistency",
+        "Optimized rendering, debugged production issues, and improved test coverage",
+        "Used AI tools (Cursor, Claude Code, Copilot) to accelerate delivery"
       ]
     },
     {
