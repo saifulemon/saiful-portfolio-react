@@ -28,7 +28,7 @@ export function ProjectCard({ title, description, tags, highlights, liveUrl, git
 
       <div className="relative h-full flex flex-col justify-between glass-card p-6 md:p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 ease-out border border-white/5 hover:border-primary/30">
         <div>
-          <div className="flex justify-between items-start mb-6">
+          <div className="flex justify-between items-center mb-6">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background transition-colors duration-300">
               <ExternalLink size={24} />
             </div>
