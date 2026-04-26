@@ -17,10 +17,10 @@ export function ProjectCard({ title, description, tags, highlights, liveUrl, git
       href={liveUrl}
       target="_blank"
       rel="noopener noreferrer"
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ delay: index * 0.1 }}
+      viewport={{ once: true, margin: "-30px" }}
+      transition={{ delay: Math.min(index * 0.07, 0.35), duration: 0.35 }}
       className={`group relative h-full block${!liveUrl ? ' pointer-events-none' : ''}`}
     >
       {/* Glow effect behind card */}

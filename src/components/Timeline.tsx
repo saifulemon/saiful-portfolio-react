@@ -20,9 +20,10 @@ export function TimelineItem({ title, subtitle, period, bullets, isLast }: Timel
       <div className="flex items-center gap-3 mb-3">
         <div className="w-6 h-6 shrink-0 rounded-full border-4 border-background bg-primary shadow-[0_0_10px_rgba(59,130,246,0.8)] z-10" />
         <motion.span
-          initial={{ opacity: 0, x: -10 }}
+          initial={{ opacity: 0, x: -8 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
           className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 font-medium text-xs"
         >
           {period}
@@ -32,9 +33,10 @@ export function TimelineItem({ title, subtitle, period, bullets, isLast }: Timel
       {/* Card indented below dot */}
       <div className="ml-9">
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
           className="glass-card p-6 rounded-2xl"
         >
           <h3 className="text-xl font-bold text-foreground">{title}</h3>
