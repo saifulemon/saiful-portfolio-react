@@ -13,7 +13,7 @@ export const PORTFOLIO_DATA = {
   skills: {
     frontend: ["React 19", "React Router 7", "Next.js", "Remix.js", "Redux Toolkit", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "shadcn", "Bootstrap", "Three.js", "Chart.js", "Markdown Editor", "Axios", "React PDF"],
     backend: ["Node.js", "Nest.js", "WebSocket", "Socket.io", "PostgreSQL"],
-    tools: ["Vite", "VS Code", "Cursor", "Claude Code", "Agentic AI", "GitHub Copilot", "Git", "Firebase", "Linux", "WordPress", "Shopify"]
+    tools: ["Vite", "VS Code", "Cursor", "Claude Code", "OpenCode", "Agentic AI", "GitHub Copilot", "Git", "Firebase", "Linux", "WordPress", "Shopify"]
   },
   experience: [
     {
