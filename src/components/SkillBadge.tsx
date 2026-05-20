@@ -56,6 +56,15 @@ function ClaudeIcon() {
     </svg>
   );
 }
+
+function OpenCodeIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none">
+      <rect x="2" y="2" width="20" height="20" rx="2" fill="currentColor" fillOpacity="0.2"/>
+      <rect x="6" y="6" width="12" height="12" rx="1" fill="currentColor"/>
+    </svg>
+  );
+}
 import {
   SiReact, SiReactrouter, SiNextdotjs, SiRemix, SiRedux,
   SiTypescript, SiJavascript, SiTailwindcss,
@@ -68,7 +77,7 @@ import { MdBarChart } from 'react-icons/md';
 import { TbBrandSocketIo } from 'react-icons/tb';
 import { AiOutlineEdit } from 'react-icons/ai';
 import { BiAtom } from 'react-icons/bi';
-import { Sparkles, Bot } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 const iconMap: Record<string, { icon: ReactNode; color: string }> = {
   // Frontend
@@ -98,7 +107,7 @@ const iconMap: Record<string, { icon: ReactNode; color: string }> = {
   'VS Code':            { icon: <VSCodeIcon />,                 color: '#007ACC' },
   'Cursor':             { icon: <CursorIcon />,                 color: 'currentColor' },
   'Claude Code':        { icon: <ClaudeIcon />,                 color: '#CC785C' },
-  'OpenCode':           { icon: <Bot size={14} />,               color: '#22D3EE' },
+  'OpenCode':           { icon: <OpenCodeIcon />,                 color: '#22D3EE' },
   'Agentic AI':         { icon: <Sparkles size={14} />,          color: '#A855F7' },
   'GitHub Copilot':     { icon: <CopilotIcon />,               color: 'currentColor' },
   'Git':                { icon: <SiGit size={14} />,            color: '#F05032' },
