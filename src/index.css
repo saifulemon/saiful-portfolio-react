@@ -161,6 +161,78 @@
   66% { transform: translateY(6px) rotate(240deg); }
 }
 
+@keyframes water-fill {
+  0% {
+    clip-path: polygon(
+      0% 100%,
+      16% 100%,
+      33% 100%,
+      50% 100%,
+      66% 100%,
+      83% 100%,
+      100% 100%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  25% {
+    clip-path: polygon(
+      0% 65%,
+      16% 85%,
+      33% 65%,
+      50% 85%,
+      66% 65%,
+      83% 85%,
+      100% 65%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      16% 40%,
+      33% 60%,
+      50% 40%,
+      66% 60%,
+      83% 40%,
+      100% 60%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  75% {
+    clip-path: polygon(
+      0% 15%,
+      16% 35%,
+      33% 15%,
+      50% 35%,
+      66% 15%,
+      83% 35%,
+      100% 15%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      0% 0%,
+      16% 0%,
+      33% 0%,
+      50% 0%,
+      66% 0%,
+      83% 0%,
+      100% 0%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+.animate-water-fill {
+  animation: water-fill 5s ease-in-out infinite alternate;
+}
+
 /* Respect user's motion preference */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

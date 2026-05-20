@@ -7,6 +7,7 @@ import { SectionHeading } from '@/components/SectionHeading';
 import { TimelineItem } from '@/components/Timeline';
 import { ProjectCard } from '@/components/ProjectCard';
 import { TypingAnimation } from '@/components/TypingAnimation';
+import { WaterFillName } from '@/components/WaterFillName';
 import { SkillBadge } from '@/components/SkillBadge';
 
 export function Home() {
@@ -33,7 +34,7 @@ export function Home() {
                   Hello, world. I am
                 </h2>
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-display font-extrabold text-foreground tracking-tight leading-tight mb-6">
-                  {PORTFOLIO_DATA.personal.name}.<br/>
+                  <WaterFillName name={PORTFOLIO_DATA.personal.name} />.<br/>
                   <span className="block min-h-[1.3em]">
                     <TypingAnimation />
                   </span>
