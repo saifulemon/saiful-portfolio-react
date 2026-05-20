@@ -68,6 +68,7 @@ import { MdBarChart } from 'react-icons/md';
 import { TbBrandSocketIo } from 'react-icons/tb';
 import { AiOutlineEdit } from 'react-icons/ai';
 import { BiAtom } from 'react-icons/bi';
+import { Sparkles } from 'lucide-react';
 
 const iconMap: Record<string, { icon: ReactNode; color: string }> = {
   // Frontend
@@ -97,6 +98,7 @@ const iconMap: Record<string, { icon: ReactNode; color: string }> = {
   'VS Code':            { icon: <VSCodeIcon />,                 color: '#007ACC' },
   'Cursor':             { icon: <CursorIcon />,                 color: 'currentColor' },
   'Claude Code':        { icon: <ClaudeIcon />,                 color: '#CC785C' },
+  'Agentic AI':         { icon: <Sparkles size={14} />,          color: '#A855F7' },
   'GitHub Copilot':     { icon: <CopilotIcon />,               color: 'currentColor' },
   'Git':                { icon: <SiGit size={14} />,            color: '#F05032' },
   'Firebase':           { icon: <SiFirebase size={14} />,       color: '#FFCA28' },
