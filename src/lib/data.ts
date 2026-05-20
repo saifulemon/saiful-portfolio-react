@@ -13,7 +13,7 @@ export const PORTFOLIO_DATA = {
   skills: {
     frontend: ["React 19", "React Router 7", "Next.js", "Remix.js", "Redux Toolkit", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "shadcn", "Bootstrap", "Three.js", "Chart.js", "Markdown Editor", "Axios", "React PDF"],
     backend: ["Node.js", "Nest.js", "WebSocket", "Socket.io", "PostgreSQL"],
-    tools: ["Vite", "VS Code", "Cursor", "Claude Code", "GitHub Copilot", "Git", "Firebase", "Linux", "WordPress", "Shopify"]
+    tools: ["Vite", "VS Code", "Cursor", "Claude Code", "Agentic AI", "GitHub Copilot", "Git", "Firebase", "Linux", "WordPress", "Shopify"]
   },
   experience: [
     {
@@ -25,6 +25,8 @@ export const PORTFOLIO_DATA = {
         "Built features with React, Next.js, Remix, Redux, Nest.js and PostgreSQL",
         "Created reusable components and custom hooks to improve UI consistency",
         "Optimized rendering, debugged production issues, and improved test coverage",
+        "Architected agentic AI workflows with Claude Code — built automated code audit agents and feature replication pipelines",
+        "Reduced repetitive development overhead by automating code reviews, documentation, and scaffolding through .claude workflow configurations",
         "Used AI tools (Cursor, Claude Code, Copilot) to accelerate delivery"
       ]
     },
@@ -208,6 +210,12 @@ export const PORTFOLIO_DATA = {
       icon: "api",
       title: "API Integration & Development",
       description: "Seamless API integration connecting frontend with backend services, third-party APIs, and databases to create dynamic, data-driven web applications."
+    },
+    {
+      id: 7,
+      icon: "ai",
+      title: "AI-Native Development",
+      description: "Building agentic AI workflows and automations with Claude Code — from automated code audits and feature replication to scaffolding and documentation generation."
     }
   ]
 };

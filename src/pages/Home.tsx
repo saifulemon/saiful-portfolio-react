@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Facebook, Download, Code2, Smartphone, Palette, ShoppingCart, Layers, Plug } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Facebook, Download, Code2, Smartphone, Palette, ShoppingCart, Layers, Plug, Sparkles } from 'lucide-react';
 import { PORTFOLIO_DATA } from '@/lib/data';
 import { Hero3D } from '@/components/Hero3D';
 import { Navbar } from '@/components/Navbar';
@@ -211,12 +211,13 @@ export function Home() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {PORTFOLIO_DATA.services.map((service, idx) => {
                 const icons: Record<string, React.ReactNode> = {
-                  code:    <Code2 size={28} />,
-                  mobile:  <Smartphone size={28} />,
-                  palette: <Palette size={28} />,
-                  cart:    <ShoppingCart size={28} />,
-                  stack:   <Layers size={28} />,
-                  api:     <Plug size={28} />,
+                  code:      <Code2 size={28} />,
+                  mobile:    <Smartphone size={28} />,
+                  palette:   <Palette size={28} />,
+                  cart:      <ShoppingCart size={28} />,
+                  stack:     <Layers size={28} />,
+                  api:       <Plug size={28} />,
+                  ai:        <Sparkles size={28} />,
                 };
                 return (
                   <motion.div
