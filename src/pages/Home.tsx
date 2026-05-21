@@ -23,23 +23,23 @@ export function Home() {
         <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <Hero3D />
           
-          <div className="max-w-7xl mx-auto w-full z-10 grid lg:grid-cols-12 gap-12 items-center">
+          <div className="max-w-7xl mx-auto w-full z-10 grid lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h2 className="text-primary font-medium tracking-wider uppercase mb-4 pl-1">
+                <h2 className="text-foreground font-medium tracking-wider uppercase mb-0 pl-1">
                   Hello, world. I am
                 </h2>
-                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-display font-extrabold text-foreground tracking-tight leading-tight mb-6">
+                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-display font-extrabold text-foreground tracking-tight leading-tight mb-4">
                   <WaterFillName name={PORTFOLIO_DATA.personal.name} />.<br/>
                   <span className="block min-h-[1.3em]">
                     <TypingAnimation />
                   </span>
                 </h1>
-                <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
+                <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mb-6 leading-relaxed">
                   A {PORTFOLIO_DATA.personal.title} specializing in transforming ideas into clean, maintainable, and user-centric digital products.
                 </p>
                 
@@ -73,9 +73,9 @@ export function Home() {
         </section>
 
         {/* ABOUT SECTION */}
-        <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 relative">
+        <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-12 gap-12 items-center">
+            <div className="grid lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-5 relative group">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary to-accent rounded-3xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
                 <div className="relative aspect-square rounded-3xl overflow-hidden glass border border-white/10 p-2">
@@ -86,7 +86,7 @@ export function Home() {
                   />
                 </div>
               </div>
-              <div className="lg:col-span-7 lg:pl-10">
+              <div className="lg:col-span-7 lg:pl-6">
                 <SectionHeading title="About Me" subtitle="A brief introduction to who I am and what I do." />
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -96,7 +96,7 @@ export function Home() {
                 >
                   <p>{PORTFOLIO_DATA.personal.bio}</p>
                   
-                  <div className="mt-8 grid sm:grid-cols-2 gap-6">
+                  <div className="mt-6 grid sm:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-1">
                       <span className="text-primary font-medium">Location</span>
                       <span className="text-foreground">{PORTFOLIO_DATA.personal.location}</span>
@@ -107,7 +107,7 @@ export function Home() {
                     </div>
                   </div>
                   
-                  <div className="mt-10 flex gap-4">
+                  <div className="mt-6 flex gap-4">
                     {[
                       { icon: Github, url: PORTFOLIO_DATA.personal.github },
                       { icon: Linkedin, url: PORTFOLIO_DATA.personal.linkedin },
@@ -131,11 +131,11 @@ export function Home() {
         </section>
 
         {/* SKILLS SECTION */}
-        <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <section id="skills" className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <SectionHeading title="Technical Arsenal" subtitle="The tools and technologies I use to build digital experiences." />
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6">
               {[
                 { title: "Frontend", skills: PORTFOLIO_DATA.skills.frontend, color: "from-blue-500 to-cyan-400" },
                 { title: "Backend", skills: PORTFOLIO_DATA.skills.backend, color: "from-purple-500 to-blue-500" },
@@ -147,9 +147,9 @@ export function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className="glass-card p-8 rounded-3xl"
+                  className="glass-card p-6 rounded-3xl"
                 >
-                  <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
+                  <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
                     <span className={`w-3 h-3 rounded-full bg-gradient-to-r ${category.color}`} />
                     {category.title}
                   </h3>
@@ -165,13 +165,13 @@ export function Home() {
         </section>
 
         {/* EXPERIENCE & EDUCATION SECTION */}
-        <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8">
+        <section id="experience" className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 lg:gap-12">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-10">
               {/* Experience */}
               <div>
                 <SectionHeading title="Experience" />
-                <div className="space-y-12">
+                <div className="space-y-8">
                   {PORTFOLIO_DATA.experience.map((exp, idx) => (
                     <TimelineItem 
                       key={exp.id}
@@ -188,7 +188,7 @@ export function Home() {
               {/* Education */}
               <div id="education">
                 <SectionHeading title="Education" />
-                <div className="space-y-12">
+                <div className="space-y-8">
                   {PORTFOLIO_DATA.education.map((edu, idx) => (
                     <TimelineItem
                       key={edu.id}
@@ -206,10 +206,10 @@ export function Home() {
         </section>
 
         {/* SERVICES SECTION */}
-        <section id="services" className="py-24 px-4 sm:px-6 lg:px-8">
+        <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <SectionHeading title="Services" subtitle="What I can build for you." />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {PORTFOLIO_DATA.services.map((service, idx) => {
                 const icons: Record<string, React.ReactNode> = {
                   code:      <Code2 size={28} />,
@@ -227,14 +227,14 @@ export function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ delay: idx * 0.1 }}
-                    className="group glass-card p-8 rounded-3xl border border-white/5 hover:border-primary/30 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden"
+                    className="group glass-card p-6 rounded-3xl border border-white/5 hover:border-primary/30 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="relative text-center">
-                      <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-accent mb-6 group-hover:bg-primary group-hover:text-background transition-colors duration-300 mx-auto">
+                      <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-accent mb-4 group-hover:bg-primary group-hover:text-background transition-colors duration-300 mx-auto">
                         {icons[service.icon]}
                       </div>
-                      <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
                         {service.title}
                       </h3>
                       <p className="text-muted-foreground text-sm leading-relaxed">
@@ -249,11 +249,11 @@ export function Home() {
         </section>
 
         {/* PROJECTS SECTION */}
-        <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <SectionHeading title="Featured Projects" subtitle="A selection of my recent work and personal projects." />
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
               {PORTFOLIO_DATA.projects.map((project, idx) => (
                 <ProjectCard
                   key={project.id}
@@ -271,7 +271,7 @@ export function Home() {
         </section>
 
         {/* CONTACT SECTION */}
-        <section id="contact" className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           {/* Decorative background glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl aspect-square bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
           
@@ -280,7 +280,7 @@ export function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6"
+              className="text-4xl md:text-6xl font-display font-bold text-foreground mb-4"
             >
               Let's Build Something <span className="text-primary text-glow">Together</span>
             </motion.h2>
@@ -289,7 +289,7 @@ export function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-muted-foreground mb-12"
+              className="text-xl text-muted-foreground mb-8"
             >
               Whether you have a question, a project idea, or just want to say hi, my inbox is always open.
             </motion.p>
@@ -317,7 +317,7 @@ export function Home() {
               </button>
             </motion.div>
             
-            <div className="mt-16 flex flex-wrap justify-center gap-8 text-muted-foreground">
+            <div className="mt-10 flex flex-wrap justify-center gap-8 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <MapPin size={18} className="text-primary" />
                 <span>{PORTFOLIO_DATA.personal.location}</span>

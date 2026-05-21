@@ -9,13 +9,13 @@ interface SectionHeadingProps {
 
 export function SectionHeading({ title, subtitle, className }: SectionHeadingProps) {
   return (
-    <div className={cn("mb-8 md:mb-12", className)}>
+    <div className={cn("mb-6 md:mb-8", className)}>
       <motion.h2
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.35 }}
-        className="text-3xl md:text-5xl font-display font-bold text-foreground mb-2"
+        className="text-3xl md:text-5xl font-display font-bold text-foreground mb-1.5"
       >
         {title}
         <span className="text-primary">.</span>
@@ -25,7 +25,7 @@ export function SectionHeading({ title, subtitle, className }: SectionHeadingPro
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.08, duration: 0.35 }}
-        className="h-1 w-24 bg-gradient-to-r from-primary to-accent mb-3 origin-left rounded-full"
+        className="h-1 w-24 bg-gradient-to-r from-primary to-accent mb-2 origin-left rounded-full"
       />
       {subtitle && (
         <motion.p
