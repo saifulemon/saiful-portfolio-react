@@ -7,7 +7,7 @@ interface WaterFillNameProps {
 
 export function WaterFillName({ name, className = '' }: WaterFillNameProps) {
   return (
-    <span className={`relative inline-block ${className}`}>
+    <span className={`relative inline-block text-[36px] sm:text-[40px] lg:text-[60px] ${className}`}>
       {/* Outline layer */}
       <span
         className="block text-transparent"
