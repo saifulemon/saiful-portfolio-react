@@ -1,3 +1,4 @@
+import React from "react";
 import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -17,6 +18,15 @@ function Router() {
 }
 
 function App() {
+  React.useEffect(() => {
+    const handler = () => {
+      window.dataLayer?.push({ event: "pageview", url: window.location.href });
+    };
+    handler();
+    window.addEventListener("hashchange", handler);
+    return () => window.removeEventListener("hashchange", handler);
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
