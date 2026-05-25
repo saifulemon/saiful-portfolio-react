@@ -61,12 +61,6 @@ export const PORTFOLIO_DATA = {
     },
     {
       id: 3,
-      degree: "SSC / (Dakhil)",
-      institution: "Baksha Mahmud Islamia Dakhil Madrasha",
-      period: "2017 – 2019"
-    },
-    {
-      id: 4,
       degree: "Web Design & Development (LEDP)",
       institution: "ICT Division Bangladesh",
       period: "2020 – 2021"
