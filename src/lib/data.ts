@@ -20,6 +20,8 @@ export const PORTFOLIO_DATA = {
       id: 1,
       role: "Jr. Frontend Developer",
       company: "Potential Inc.",
+      companyUrl: "https://potentialai.com/",
+      location: "Seoul, South Korea",
       period: "July 2024 – Present",
       achievements: [
         "Drive agentic AI adoption company-wide: design and maintain a shared .claude submodule of custom agents, skills, and slash commands used across every active project",

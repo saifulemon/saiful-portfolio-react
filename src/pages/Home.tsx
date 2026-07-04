@@ -173,10 +173,12 @@ export function Home() {
                 <SectionHeading title="Experience" />
                 <div className="space-y-8">
                   {PORTFOLIO_DATA.experience.map((exp, idx) => (
-                    <TimelineItem 
+                    <TimelineItem
                       key={exp.id}
                       title={exp.role}
                       subtitle={exp.company}
+                      subtitleUrl={(exp as any).companyUrl}
+                      location={(exp as any).location}
                       period={exp.period}
                       bullets={exp.achievements}
                       isLast={idx === PORTFOLIO_DATA.experience.length - 1}

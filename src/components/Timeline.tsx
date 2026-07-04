@@ -3,12 +3,14 @@ import { motion } from 'framer-motion';
 interface TimelineItemProps {
   title: string;
   subtitle: string;
+  subtitleUrl?: string;
+  location?: string;
   period: string;
   bullets?: string[];
   isLast?: boolean;
 }
 
-export function TimelineItem({ title, subtitle, period, bullets, isLast }: TimelineItemProps) {
+export function TimelineItem({ title, subtitle, subtitleUrl, location, period, bullets, isLast }: TimelineItemProps) {
   return (
     <div className="relative">
       {/* Vertical line */}
@@ -40,7 +42,16 @@ export function TimelineItem({ title, subtitle, period, bullets, isLast }: Timel
           className="glass-card p-6 rounded-2xl"
         >
           <h3 className="text-xl font-bold text-foreground">{title}</h3>
-          <h4 className="text-lg font-medium text-muted-foreground mb-3">{subtitle}</h4>
+          <h4 className="text-lg font-medium text-muted-foreground mb-3">
+            {subtitleUrl ? (
+              <a href={subtitleUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                {subtitle}
+              </a>
+            ) : (
+              subtitle
+            )}
+            {location && <span className="text-sm text-muted-foreground/70"> — {location}</span>}
+          </h4>
           {bullets && bullets.length > 0 && (
             <ul className="space-y-1.5">
               {bullets.map((bullet, idx) => (
