@@ -12,16 +12,18 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ title, description, tags, highlights, liveUrl, githubUrl, index }: ProjectCardProps) {
+  const primaryUrl = liveUrl ?? githubUrl;
+
   return (
     <motion.a
-      href={liveUrl}
+      href={primaryUrl}
       target="_blank"
       rel="noopener noreferrer"
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-30px" }}
       transition={{ delay: Math.min(index * 0.07, 0.35), duration: 0.35 }}
-      className={`group relative h-full block${!liveUrl ? ' pointer-events-none' : ''}`}
+      className={`group relative h-full block${!primaryUrl ? ' pointer-events-none' : ''}`}
     >
       {/* Glow effect behind card */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
