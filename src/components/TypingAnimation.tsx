@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
 const PHRASES = [
-  'I build the Web.',
-  'Frontend Developer',
+  'I build with Agentic AI.',
+  'Agentic AI Engineer',
+  'Frontend-Specialized Full-Stack Developer',
+  'Claude Code Power User',
   'React Specialist',
-  'JavaScript Programmer',
-  'AI-Native Developer',
 ];
 
 const TYPING_SPEED = 80;

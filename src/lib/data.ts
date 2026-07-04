@@ -8,12 +8,12 @@ export const PORTFOLIO_DATA = {
     linkedin: "https://www.linkedin.com/in/saiful-emon/",
     github: "https://github.com/saifulemon",
     facebook: "https://www.facebook.com/dev.saifulemon/",
-    bio: "Currently pursuing a BSc in Computer Science & Engineering (CSE) at Presidency University, Bangladesh. Previously completed a Diploma in Engineering in Data Telecommunication & Networking Technology from Feni Computer Institute. Focuses on building scalable, responsive, and performance-optimized web applications using the JavaScript ecosystem. Specializes in transforming ideas into clean, maintainable, and user-centric digital products."
+    bio: "Frontend-specialized full-stack developer who builds with agentic AI at the core of the workflow, not as an add-on. Designs and runs multi-agent systems with Claude Code and OpenCode to take projects from system design through production — automated code review, gap analysis, feature scaffolding, and documentation pipelines that replace hours of manual work with minutes of agent orchestration. Actively maintains and contributes to a shared .claude submodule used across every project, continuously expanding its library of agents, skills, and workflows. Currently pursuing a BSc in Computer Science & Engineering (CSE) at Presidency University, Bangladesh, with a Diploma in Data Telecommunication & Networking Technology from Feni Computer Institute. Combines deep JavaScript/React expertise with hands-on agentic engineering to ship scalable, production-ready products faster and cleaner."
   },
   skills: {
     frontend: ["React 19", "React Router 7", "Next.js", "Remix.js", "Redux Toolkit", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "shadcn", "Bootstrap", "Three.js", "Chart.js", "Markdown Editor", "Axios", "React PDF"],
     backend: ["Node.js", "Nest.js", "WebSocket", "Socket.io", "PostgreSQL"],
-    tools: ["Vite", "VS Code", "Cursor", "Claude Code", "OpenCode", "Agentic AI", "GitHub Copilot", "Git", "Firebase", "Linux", "WordPress", "Shopify"]
+    tools: ["Claude Code", "OpenCode", "Agentic AI Workflows", ".claude Submodule Architecture", "Multi-Agent Orchestration", "GitHub Copilot", "Cursor", "Vite", "Git", "Firebase", "Linux", "WordPress", "Shopify"]
   },
   experience: [
     {
@@ -22,12 +22,13 @@ export const PORTFOLIO_DATA = {
       company: "Potential Inc.",
       period: "July 2024 – Present",
       achievements: [
+        "Drive agentic AI adoption company-wide: design and maintain a shared .claude submodule of custom agents, skills, and slash commands used across every active project",
+        "Architect multi-agent workflows with Claude Code and OpenCode covering the full project lifecycle — system design, scaffolding, implementation, code review, and production readiness",
+        "Built automated code-audit agents, gap-finder/gap-fixer pipelines, and feature-replication workflows that cut repetitive engineering work from hours to minutes",
         "Built features with React, Next.js, Remix, Redux, Nest.js and PostgreSQL",
         "Created reusable components and custom hooks to improve UI consistency",
         "Optimized rendering, debugged production issues, and improved test coverage",
-        "Architected agentic AI workflows with Claude Code — built automated code audit agents and feature replication pipelines",
-        "Reduced repetitive development overhead by automating code reviews, documentation, and scaffolding through .claude workflow configurations",
-        "Used AI tools (Cursor, Claude Code, Copilot) to accelerate delivery"
+        "Continuously explore and contribute new agent workflows back into the shared .claude submodule, raising delivery speed and consistency for the whole team"
       ]
     },
     {
@@ -169,45 +170,45 @@ export const PORTFOLIO_DATA = {
   services: [
     {
       id: 1,
-      icon: "code",
-      title: "React & Next.js Development",
-      description: "Building modern, scalable web applications using React 19, Next.js, and Remix.js with full API integration, SSR, and responsive design."
+      icon: "ai",
+      title: "Agentic AI Engineering",
+      description: "Designing and running multi-agent systems with Claude Code and OpenCode across the full project lifecycle — system design, scaffolding, code review, and production deployment — powered by a self-built, continuously evolving .claude workflow submodule."
     },
     {
       id: 2,
-      icon: "mobile",
-      title: "Web View Applications",
-      description: "Developing mobile-ready web view apps using React 19 and Router 7 with seamless UX, design-to-code conversion, and cross-platform compatibility."
-    },
-    {
-      id: 3,
-      icon: "palette",
-      title: "Design to Code Conversion",
-      description: "Converting Figma, XD, or PSD designs into pixel-perfect, responsive code using React, Tailwind CSS, and shadcn for stunning results."
-    },
-    {
-      id: 4,
-      icon: "cart",
-      title: "E-Commerce Development",
-      description: "Building fully functional e-commerce platforms with Next.js — from product catalogs to checkout flows with API integration and payment systems."
-    },
-    {
-      id: 5,
       icon: "stack",
       title: "Full-Stack Development",
       description: "Complete full-stack solutions with React/Next.js on the frontend and Nest.js, Socket.io, and PostgreSQL on the backend — from concept to deployment."
     },
     {
+      id: 3,
+      icon: "code",
+      title: "React & Next.js Development",
+      description: "Building modern, scalable web applications using React 19, Next.js, and Remix.js with full API integration, SSR, and responsive design."
+    },
+    {
+      id: 4,
+      icon: "mobile",
+      title: "Web View Applications",
+      description: "Developing mobile-ready web view apps using React 19 and Router 7 with seamless UX, design-to-code conversion, and cross-platform compatibility."
+    },
+    {
+      id: 5,
+      icon: "palette",
+      title: "Design to Code Conversion",
+      description: "Converting Figma, XD, or PSD designs into pixel-perfect, responsive code using React, Tailwind CSS, and shadcn for stunning results."
+    },
+    {
       id: 6,
-      icon: "api",
-      title: "API Integration & Development",
-      description: "Seamless API integration connecting frontend with backend services, third-party APIs, and databases to create dynamic, data-driven web applications."
+      icon: "cart",
+      title: "E-Commerce Development",
+      description: "Building fully functional e-commerce platforms with Next.js — from product catalogs to checkout flows with API integration and payment systems."
     },
     {
       id: 7,
-      icon: "ai",
-      title: "AI-Native Development",
-      description: "Building agentic AI workflows and automations with Claude Code — from automated code audits and feature replication to scaffolding and documentation generation."
+      icon: "api",
+      title: "API Integration & Development",
+      description: "Seamless API integration connecting frontend with backend services, third-party APIs, and databases to create dynamic, data-driven web applications."
     }
   ]
 };
