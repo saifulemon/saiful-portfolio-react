@@ -95,11 +95,11 @@ export const PORTFOLIO_DATA = {
       id: 3,
       title: "iipuda",
       liveUrl: "https://iipuda.vercel.app/",
-      description: "Web view application built with Remix.js.",
+      description: "Book premium verified clinics & K-Beauty in Korea — get matched with a clinic worth trusting, at the locals' price.",
       tags: ["Remix.js", "TypeScript", "Tailwind CSS", "Vite", "Axios"],
       highlights: [
-        "Built a full-stack web app with Remix.js leveraging server-side rendering for fast page loads",
-        "Utilized nested routing and loader/action patterns for efficient server-client data flow",
+        "Built a K-Beauty clinic discovery and booking web view with Remix.js SSR for fast page loads",
+        "Implemented nested routing and loader/action patterns to surface verified clinic listings and recommendations",
         "Deployed on Vercel with optimized build output and progressive enhancement support"
       ]
     },
@@ -130,44 +130,42 @@ export const PORTFOLIO_DATA = {
     },
     {
       id: 6,
-      title: "Modern CV Template",
-      liveUrl: "https://6268f1a7d7009d750803e81b--funny-panda-88de7e.netlify.app/",
-      githubUrl: "https://github.com/saifulemon/modern-cv",
-      description: "A personal portfolio and CV site showcasing skills, experience, and project work.",
-      tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+      title: "NestFind",
+      liveUrl: "https://nestfind-app-snowy.vercel.app/",
+      githubUrl: "https://github.com/saifulemon/nestfind-app",
+      description: "Find your perfect nest without the noise — a full-stack rental and property discovery platform.",
+      tags: ["TypeScript", "React", "Vite", "Node.js", "SQLite"],
       highlights: [
-        "Built an interactive portfolio with filterable project gallery across tech categories",
-        "Displayed skills with proficiency indicators and a work history timeline from 2016–2022",
-        "Included a downloadable CV, testimonials section, and functional contact form"
+        "Built a full-stack property search app with a React/Vite frontend and Node.js backend",
+        "Implemented filtering and discovery features to surface relevant rental listings",
+        "Deployed the frontend on Vercel with a SQLite-backed data layer for persistence"
       ]
     },
     {
       id: 7,
-      title: "Hashtag — Digital Marketing",
-      liveUrl: "https://hashtagv2.netlify.app/",
-      githubUrl: "https://github.com/saifulemon/digital-marketing-agency",
-      description: "Landing page for a social media marketing agency with pricing and service tiers.",
-      tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+      title: "Mess Manager",
+      githubUrl: "https://github.com/saifulemon/mess-manager",
+      description: "Make your daily meal count, expenses, and mess finances easier to manage with Mess Manager.",
+      tags: ["TypeScript", "React", "Node.js"],
       highlights: [
-        "Designed a marketing agency landing page with six feature sections and three pricing tiers",
-        "Built a fully responsive layout using Bootstrap with smooth anchor-based navigation",
-        "Included client testimonials, FAQ section, and free trial CTA to drive conversions"
+        "Built a mess management app to track daily meals and shared expenses",
+        "Implemented expense tracking and member management features for shared living",
+        "Structured as a full-stack monorepo with a React frontend and Node.js backend"
       ]
     },
     {
       id: 8,
-      title: "E-School",
-      liveUrl: "https://saifulemon.github.io/E-School/",
-      githubUrl: "https://github.com/saifulemon/E-School",
-      description: "An online learning platform offering 1,500+ courses with student enrollment and scheduling.",
-      tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+      title: "PetPulse",
+      githubUrl: "https://github.com/saifulemon/PetPulse",
+      description: "Monitor and track your pet's wellbeing over time with a connected full-stack app.",
+      tags: ["TypeScript", "React", "Node.js"],
       highlights: [
-        "Built an e-learning platform featuring 1,500+ course topics and 1,800+ active learners",
-        "Implemented course scheduling with seat availability, start dates, and enrollment flow",
-        "Designed a clean UI with student registration, testimonials, and newsletter subscription"
+        "Built a pet wellbeing tracking app spanning web, mobile, and dashboard clients",
+        "Implemented a shared backend API to sync pet health and activity data across platforms",
+        "Structured as a full-stack monorepo with frontend, mobile, dashboard, and backend workspaces"
       ]
-    }
-  ],
+    },
+    ],
   services: [
     {
       id: 1,
